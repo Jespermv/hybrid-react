@@ -1,1 +1,1 @@
-Open [https://users.metropolia.fi/~jespermv/Hybridisovellukset/context/] to view it in the browser.
+Open [https://users.metropolia.fi/~jespermv/Hybridisovellukset/upload/] to view it in the browser.

@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   // Käytä users.metropolia basea vain jos ajat users.metropoliassa. Muuten käytä basea ''.
-  base: '/~jespermv/Hybridisovellukset/context/',
+  base: '/~jespermv/Hybridisovellukset/upload/',
   //base: '',
   test: {
     environment: 'jsdom',
