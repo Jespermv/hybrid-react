@@ -1,11 +1,10 @@
-import { useLocation } from "react-router-dom";
-import {MediaItem} from "hybrid-types/DBTypes"
-import { NavigateFunction, useNavigate } from "react-router";
+import {MediaItemWithOwner} from 'hybrid-types/DBTypes';
+import {NavigateFunction, useLocation, useNavigate} from 'react-router';
 
 const Single = () => {
   const navigate: NavigateFunction = useNavigate();
   const {state} = useLocation();
-  const item: MediaItem = state.item
+  const item: MediaItemWithOwner = state.item;
   return (
     <>
       <h2>Single</h2>
@@ -17,9 +16,16 @@ const Single = () => {
         <video src={item.filename} controls />
       )}
       <p>{item.description}</p>
+      <p>Owner: {item.username}</p>
       <p>Type: {item.media_type}</p>
-      <p>Size: {Math.round(item.filesize/1024)} kB</p>
-      <button onClick={() => {navigate(-1)}}>Go Back</button>
+      <p>Size: {Math.round(item.filesize / 1024)} kB</p>
+      <button
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        go back
+      </button>
     </>
   );
 };
